@@ -20,17 +20,11 @@ UML Diagram
 Code
 ----
 
-You can also find these code on `GitHub`_
+You can also find this code on `GitHub`_
 
 SimpleFactory.php
 
 .. literalinclude:: SimpleFactory.php
-   :language: php
-   :linenos:
-
-VehicleInterface.php
-
-.. literalinclude:: VehicleInterface.php
    :language: php
    :linenos:
 

@@ -52,7 +52,7 @@ UML Diagram
 Code
 ----
 
-You can also find these code on `GitHub`_
+You can also find this code on `GitHub`_
 
 Memento.php
 
@@ -60,9 +60,9 @@ Memento.php
    :language: php
    :linenos:
 
-Originator.php
+State.php
 
-.. literalinclude:: Originator.php
+.. literalinclude:: State.php
    :language: php
    :linenos:
 

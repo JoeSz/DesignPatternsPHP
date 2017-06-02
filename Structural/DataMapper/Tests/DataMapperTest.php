@@ -3,9 +3,11 @@
 namespace DesignPatterns\Structural\DataMapper\Tests;
 
 use DesignPatterns\Structural\DataMapper\StorageAdapter;
+use DesignPatterns\Structural\DataMapper\User;
 use DesignPatterns\Structural\DataMapper\UserMapper;
+use PHPUnit\Framework\TestCase;
 
-class DataMapperTest extends \PHPUnit_Framework_TestCase
+class DataMapperTest extends TestCase
 {
     public function testCanMapUserFromStorage()
     {
@@ -14,7 +16,7 @@ class DataMapperTest extends \PHPUnit_Framework_TestCase
 
         $user = $mapper->findById(1);
 
-        $this->assertInstanceOf('DesignPatterns\Structural\DataMapper\User', $user);
+        $this->assertInstanceOf(User::class, $user);
     }
 
     /**

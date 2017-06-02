@@ -3,15 +3,16 @@
 namespace DesignPatterns\Creational\Multition\Tests;
 
 use DesignPatterns\Creational\Multiton\Multiton;
+use PHPUnit\Framework\TestCase;
 
-class MultitonTest extends \PHPUnit_Framework_TestCase
+class MultitonTest extends TestCase
 {
     public function testUniqueness()
     {
         $firstCall = Multiton::getInstance(Multiton::INSTANCE_1);
         $secondCall = Multiton::getInstance(Multiton::INSTANCE_1);
 
-        $this->assertInstanceOf('DesignPatterns\Creational\Multiton\Multiton', $firstCall);
+        $this->assertInstanceOf(Multiton::class, $firstCall);
         $this->assertSame($firstCall, $secondCall);
     }
 
@@ -20,8 +21,8 @@ class MultitonTest extends \PHPUnit_Framework_TestCase
         $firstCall = Multiton::getInstance(Multiton::INSTANCE_1);
         $secondCall = Multiton::getInstance(Multiton::INSTANCE_2);
 
-        $this->assertInstanceOf('DesignPatterns\Creational\Multiton\Multiton', $firstCall);
-        $this->assertInstanceOf('DesignPatterns\Creational\Multiton\Multiton', $secondCall);
+        $this->assertInstanceOf(Multiton::class, $firstCall);
+        $this->assertInstanceOf(Multiton::class, $secondCall);
         $this->assertNotSame($firstCall, $secondCall);
     }
 }
